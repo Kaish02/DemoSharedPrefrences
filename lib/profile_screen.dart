@@ -1,10 +1,13 @@
+import 'package:demosharedprefrences/provider_helper_sp/provider_service_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<ProviderServiceAuth>(context);
     return Scaffold(
       backgroundColor: Color(0xffe6e6e6),
       body: Center(
@@ -63,8 +66,12 @@ class ProfileScreen extends StatelessWidget {
                 color: Color(0xe28ab4f8),
                 borderRadius: BorderRadius.circular(10),
               ),
-
             ),
+            Positioned(
+              top: 100,
+                child: IconButton(onPressed: () {
+              provider.logoutUserAuth(context);
+            }, icon: Icon(Icons.exit_to_app,color: Colors.red,)))
           ],
         ),
       ),

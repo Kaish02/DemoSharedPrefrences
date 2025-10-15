@@ -1,20 +1,19 @@
-import 'package:demosharedprefrences/signup_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
 void main() {
-  runApp(LoginScreen());
+  runApp(SignupScreen());
 }
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class SignupScreen extends StatefulWidget {
+  const SignupScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<SignupScreen> createState() => _SignupScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _SignupScreenState extends State<SignupScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -23,22 +22,21 @@ class _LoginScreenState extends State<LoginScreen> {
         backgroundColor: Colors.white,
         body: ListView(
           children: [
-            SizedBox(height: 30),
             Center(
               child: SizedBox(
-                width: 300,
+                width: 270,
                 child: Lottie.asset('images/Login_blue_theme.json'),
               ),
             ),
             Center(
               child: Text(
-                'Welcome Back,',
+                'Welcome',
                 style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
               ),
             ),
             Center(
               child: Text(
-                'Login your account',
+                'Signup to get started',
                 style: TextStyle(
                   fontSize: 23,
                   fontWeight: FontWeight.bold,
@@ -53,12 +51,17 @@ class _LoginScreenState extends State<LoginScreen> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: TextFormField(
+                      cursorColor: Colors.blue,
                       decoration: InputDecoration(
                         filled: true,
                         fillColor: Color(0xffe6e6e6),
-                        hintText: 'Enter email',
+                        hintText: 'Enter name',
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide: BorderSide(color: Colors.blue, width: 2),
                         ),
                       ),
                     ),
@@ -69,12 +72,35 @@ class _LoginScreenState extends State<LoginScreen> {
                       vertical: 15,
                     ),
                     child: TextFormField(
+                      cursorColor: Colors.blue,
                       decoration: InputDecoration(
                         filled: true,
                         fillColor: Color(0xffe6e6e6),
-                        hintText: 'Enter Password',
+                        hintText: 'Enter email',
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide: BorderSide(color: Colors.blue, width: 2),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20, right: 20),
+                    child: TextFormField(
+                      cursorColor: Colors.blue,
+                      decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Color(0xffe6e6e6),
+                        hintText: 'Enter password',
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide: BorderSide(color: Colors.blue, width: 2),
                         ),
                       ),
                     ),
@@ -90,24 +116,19 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                     onPressed: () {},
-                    child: Text('Login'),
+                    child: Text('Signup'),
                   ),
                   SizedBox(height: 20),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text('Don`t have an account '),
+                      Text('I have already account '),
                       InkWell(
                         onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => SignupScreen(),
-                            ),
-                          );
+                          Navigator.pop(context);
                         },
                         child: Text(
-                          'Signup',
+                          'Login',
                           style: TextStyle(
                             color: Colors.blue,
                             fontWeight: FontWeight.w500,

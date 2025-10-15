@@ -41,7 +41,10 @@ class _SplassScreenState extends State<SplassScreen> {
           children: [
             Image.asset('assets/aurth_Splash.png',height: 180,color: Colors.blue,),
             SizedBox(height: 30,),
-            Text("Demo Share Preferences",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25),)
+            Text("Demo Shared_Preferences",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25,),),
+            SizedBox(height: 120,),
+            CircularProgressIndicator(color: Colors.blue,)
+
           ],
         ),
       ),

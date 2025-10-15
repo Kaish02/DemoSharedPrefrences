@@ -20,7 +20,7 @@ class _LoginScreenState extends State<LoginScreen> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.white,
-        body: Column(
+        body: ListView(
           children: [
             SizedBox(height: 30),
             Center(
@@ -29,16 +29,20 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Lottie.asset('images/Login_blue_theme.json'),
               ),
             ),
-            Text(
-              'Welcome Back,',
-              style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
+            Center(
+              child: Text(
+                'Welcome Back,',
+                style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
+              ),
             ),
-            Text(
-              'Login your account',
-              style: TextStyle(
-                fontSize: 23,
-                fontWeight: FontWeight.bold,
-                color: Colors.blue,
+            Center(
+              child: Text(
+                'Login your account',
+                style: TextStyle(
+                  fontSize: 23,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blue,
+                ),
               ),
             ),
             SizedBox(height: 25),

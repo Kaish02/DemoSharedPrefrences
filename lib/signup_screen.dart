@@ -23,16 +23,44 @@ class _SignupScreenState extends State<SignupScreen> {
         backgroundColor: Color(0xffe6e6e6),
         body: ListView(
           children: [
-            // Container(
-            //   width: MediaQuery.of(context).size.width,
-            //   height: MediaQuery.of(context).size.height*03,
-            // ),
-            Center(
-              child: SizedBox(
-                width: 270,
-                child: Lottie.asset('images/Login_blue_theme.json'),
-              ),
+            Stack(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(
+                    left: 18,
+                    right: 18,
+                    top: 30,
+                    bottom: 30,
+                  ),
+                  child: Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: 210,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30),
+                      color: Colors.blue,
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(
+                    left: 20,
+                    right: 20,
+                    top: 30,
+                    bottom: 30,
+                  ),
+                  child: Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: 200,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30),
+                      color: Colors.white,
+                    ),
+                    child: Lottie.asset('images/Login_blue_theme.json'),
+                  ),
+                ),
+              ],
             ),
+
             Center(
               child: Text(
                 'Welcome',
@@ -62,15 +90,15 @@ class _SignupScreenState extends State<SignupScreen> {
                       cursorColor: Colors.blue,
                       decoration: InputDecoration(
                         filled: true,
-                        fillColor:Colors.white,
+                        fillColor: Colors.white,
                         hintText: 'Enter name',
                         enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            borderSide: BorderSide(color: Colors.black,width: 0.5)
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide: BorderSide.none,
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
-                          borderSide: BorderSide(color: Colors.blue, width: 2),
+                          borderSide: BorderSide.none,
                         ),
                       ),
                     ),
@@ -87,12 +115,12 @@ class _SignupScreenState extends State<SignupScreen> {
                         fillColor: Colors.white,
                         hintText: 'Enter email',
                         enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            borderSide: BorderSide(color: Colors.black,width: 0.5)
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide: BorderSide.none,
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
-                          borderSide: BorderSide(color: Colors.blue, width: 2),
+                          borderSide: BorderSide.none,
                         ),
                       ),
                     ),
@@ -106,12 +134,12 @@ class _SignupScreenState extends State<SignupScreen> {
                         fillColor: Colors.white,
                         hintText: 'Enter password',
                         enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            borderSide: BorderSide(color: Colors.black,width: 0.5)
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide: BorderSide.none,
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
-                          borderSide: BorderSide(color: Colors.blue, width: 2),
+                          borderSide: BorderSide.none,
                         ),
                       ),
                     ),
@@ -123,7 +151,7 @@ class _SignupScreenState extends State<SignupScreen> {
                       foregroundColor: Colors.white,
                       padding: EdgeInsets.symmetric(horizontal: 140),
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(7),
+                        borderRadius: BorderRadius.circular(30),
                       ),
                     ),
                     onPressed: () {},

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 
 void main() {
@@ -19,9 +20,13 @@ class _SignupScreenState extends State<SignupScreen> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xffe6e6e6),
         body: ListView(
           children: [
+            // Container(
+            //   width: MediaQuery.of(context).size.width,
+            //   height: MediaQuery.of(context).size.height*03,
+            // ),
             Center(
               child: SizedBox(
                 width: 270,
@@ -31,14 +36,17 @@ class _SignupScreenState extends State<SignupScreen> {
             Center(
               child: Text(
                 'Welcome',
-                style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
+                style: GoogleFonts.alata(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
             Center(
               child: Text(
                 'Signup to get started',
-                style: TextStyle(
-                  fontSize: 23,
+                style: GoogleFonts.alata(
+                  fontSize: 24,
                   fontWeight: FontWeight.bold,
                   color: Colors.blue,
                 ),
@@ -54,10 +62,11 @@ class _SignupScreenState extends State<SignupScreen> {
                       cursorColor: Colors.blue,
                       decoration: InputDecoration(
                         filled: true,
-                        fillColor: Color(0xffe6e6e6),
+                        fillColor:Colors.white,
                         hintText: 'Enter name',
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10),
+                        enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10),
+                            borderSide: BorderSide(color: Colors.black,width: 0.5)
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
@@ -75,10 +84,11 @@ class _SignupScreenState extends State<SignupScreen> {
                       cursorColor: Colors.blue,
                       decoration: InputDecoration(
                         filled: true,
-                        fillColor: Color(0xffe6e6e6),
+                        fillColor: Colors.white,
                         hintText: 'Enter email',
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10),
+                        enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10),
+                            borderSide: BorderSide(color: Colors.black,width: 0.5)
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
@@ -93,10 +103,11 @@ class _SignupScreenState extends State<SignupScreen> {
                       cursorColor: Colors.blue,
                       decoration: InputDecoration(
                         filled: true,
-                        fillColor: Color(0xffe6e6e6),
+                        fillColor: Colors.white,
                         hintText: 'Enter password',
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10),
+                        enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10),
+                            borderSide: BorderSide(color: Colors.black,width: 0.5)
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
